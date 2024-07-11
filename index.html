@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate a Random Ball Color (Red/Blue)</title>
+    <style>
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        label {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #generate-button {
+            margin-top: 10px;
+        }
+
+        .btn-clean {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Generate a red or blue ball randomly</h1>
+
+    <div id="ball"></div>
+
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td><span style="color: red;">Red</span>:</td>
+                        <td id="redCount">0</td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: blue;">Blue</span>:</td>
+                        <td id="blueCount">0</td>
+                    </tr>
+                    <tr>
+                        <td>Previous color:</td>
+                        <td id="previousColor"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btn-group">
+            <button id="generate-button" class="btn btn-primary" onclick="start()">Generate</button>
+            <button id="clear-button" class="btn btn-warning btn-clean" onclick="clearAllCookies(); start();">Restart (Clear Cookies)</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

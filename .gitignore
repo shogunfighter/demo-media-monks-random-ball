@@ -1,0 +1,15 @@
+node_modules
+
+# Ignore common log files
+*.log
+
+# Ignore common IDE files
+.idea
+.vscode
+
+# Ignore common build files
+dist
+build
+
+# Ignore common editor backup files
+*~
