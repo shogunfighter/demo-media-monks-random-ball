@@ -60,7 +60,12 @@ function clearAllCookies() {
 function getCookieDetails() {
   var previousColor = getCookie('color') || '';
 
-  var color = Math.random() < 0.5 ? 'red' : 'blue';
+  var color = (previousColor !== "") 
+    ? previousColor 
+    : Math.random() < 0.5 
+      ? 'red' 
+      : 'blue';
+
   setCookie('color', color, 365);
 
   var redCount = parseInt(getCookie('redCount')) || 0;
